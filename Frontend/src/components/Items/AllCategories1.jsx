@@ -12,7 +12,7 @@ function AllCategories1() {
   // Fetch items from the backend API
   const fetchItems = async () => {
     try {
-      const response = await fetch("http://localhost:5001/api/add-new/items");
+      const response = await fetch("https://foodie-food-ordering-website.onrender.com/api/add-new/items");
       if (!response.ok) throw new Error("Failed to fetch data.");
       const data = await response.json();
       setItems(data);
@@ -29,7 +29,7 @@ function AllCategories1() {
     setTimeout(async () => {
       try {
         const response = await fetch(
-          `http://localhost:5001/api/add-new/items/${id}`,
+          `https://foodie-food-ordering-website.onrender.com/api/add-new/items/${id}`,
           {
             method: "DELETE",
           }

@@ -22,7 +22,7 @@ const Checkout = ({ totalAmount, handlePayment }) => {
         return;
       }
 
-      const response = await fetch('http://localhost:5001/api/user', {
+      const response = await fetch('https://foodie-food-ordering-website.onrender.com/api/user', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Checkout = ({ totalAmount, handlePayment }) => {
 
     const amount = totalAmount * 100; // Convert amount to paise
     try {
-      const response = await fetch('http://localhost:5001/api/v1/pay/checkout', {
+      const response = await fetch('https://foodie-food-ordering-website.onrender.com/api/v1/pay/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount, currency: 'INR' }),
@@ -97,7 +97,7 @@ const Checkout = ({ totalAmount, handlePayment }) => {
 
             try {
               const verificationResponse = await fetch(
-                'http://localhost:5001/api/v1/pay/paymentverification',
+                'https://foodie-food-ordering-website.onrender.com/api/v1/pay/paymentverification',
                 {
                   method: 'POST',
                   headers: {

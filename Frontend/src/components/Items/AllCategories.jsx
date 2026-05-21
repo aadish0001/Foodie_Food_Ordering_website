@@ -12,7 +12,7 @@ const AllCategories = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:5001/api/add-new/categories");
+        const response = await fetch("https://foodie-food-ordering-website.onrender.com/api/add-new/categories");
         if (!response.ok) throw new Error("Failed to fetch categories");
         const data = await response.json();
         setCategories(data);
@@ -29,7 +29,7 @@ const AllCategories = () => {
   // Delete a category by ID
   const deleteCategory = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/add-new/categories/${id}`, {
+      const response = await fetch(`https://foodie-food-ordering-website.onrender.com/api/add-new/categories/${id}`, {
         method: "DELETE",
       });
       if (!response.ok) throw new Error("Failed to delete category");

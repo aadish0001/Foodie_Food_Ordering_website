@@ -28,7 +28,7 @@ const UpdatePopup = ({ category, onClose, onUpdate }) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:5001/api/add-new/categories/${category._id}`,
+        `https://foodie-food-ordering-website.onrender.com/api/add-new/categories/${category._id}`,
         {
           method: "PUT",
           headers: {

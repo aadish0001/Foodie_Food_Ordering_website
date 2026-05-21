@@ -9,7 +9,7 @@
 //   useEffect(() => {
 //     const fetchOrders = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:5001/api/orders");
+//         const response = await axios.get("https://foodie-food-ordering-website.onrender.com/api/orders");
 //         const allOrders = response.data;
 
 //         // Filter orders for the past 7 days
@@ -119,7 +119,7 @@ const AllrectOrder = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/orders");
+        const response = await axios.get("https://foodie-food-ordering-website.onrender.com/api/orders");
         const allOrders = response.data;
 
         const sevenDaysAgo = new Date();

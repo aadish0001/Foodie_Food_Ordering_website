@@ -39,7 +39,7 @@ function EditPopup({ item, onCancel, onSave }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5001/api/add-new/items/${item._id}`,
+        `https://foodie-food-ordering-website.onrender.com/api/add-new/items/${item._id}`,
         {
           method: "PUT",
           headers: {

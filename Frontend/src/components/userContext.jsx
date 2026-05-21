@@ -4,7 +4,7 @@ import { useCookies } from 'react-cookie';
 const UserContext = createContext();
 
 // const serverURL = "http://192.168.54.63:5001"
-const serverURL = "http://localhost:5001"
+const serverURL = "https://foodie-food-ordering-website.onrender.com"
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);

@@ -75,7 +75,7 @@ function Footer() {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await fetch('http://localhost:5001/api/review/submit', {
+      const response = await fetch('https://foodie-food-ordering-website.onrender.com/api/review/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

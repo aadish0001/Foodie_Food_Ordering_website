@@ -5,7 +5,7 @@
 // import { toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
-// const serverURL = "http://localhost:5001";
+// const serverURL = "https://foodie-food-ordering-website.onrender.com";
 
 // function UserProfile() {
 //   const [user, setUser] = useState({
@@ -301,7 +301,7 @@ import { CartContext } from '../Cart/CartContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const serverURL = "http://localhost:5001";
+const serverURL = "https://foodie-food-ordering-website.onrender.com";
 
 function UserProfile() {
   const [user, setUser] = useState({

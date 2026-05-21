@@ -8,7 +8,7 @@
 //   useEffect(() => {
 //     const fetchReviews = async () => {
 //       try {
-//         const response = await fetch("http://localhost:5001/api/review");
+//         const response = await fetch("https://foodie-food-ordering-website.onrender.com/api/review");
 //         if (!response.ok) {
 //           throw new Error(`HTTP error! status: ${response.status}`);
 //         }
@@ -65,7 +65,7 @@ const Reviews = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch("http://localhost:5001/api/review");
+        const response = await fetch("https://foodie-food-ordering-website.onrender.com/api/review");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

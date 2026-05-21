@@ -7,7 +7,7 @@ import "./style.css";
 // Import the image at the top
 import cartBanner from "../../assets/category-images/cart.png";
 
-const serverURL = "http://localhost:5001";
+const serverURL = "https://foodie-food-ordering-website.onrender.com";
 
 const ShoppingCart = () => {
   const {

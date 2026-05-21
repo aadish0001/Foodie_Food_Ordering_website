@@ -38,7 +38,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:5001/api/user", {
+      const response = await fetch("https://foodie-food-ordering-website.onrender.com/api/user", {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

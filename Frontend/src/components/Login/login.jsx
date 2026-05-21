@@ -6,7 +6,7 @@
 // import { toast, ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
-// const serverURL = "http://localhost:5001";
+// const serverURL = "https://foodie-food-ordering-website.onrender.com";
 
 // const Login = () => {
 //   const [email, setEmail] = useState("");
@@ -128,7 +128,7 @@ import { useCookies } from "react-cookie";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const serverURL = "http://localhost:5001";
+const serverURL = "https://foodie-food-ordering-website.onrender.com";
 
 const Login = () => {
   const [email, setEmail] = useState("");
