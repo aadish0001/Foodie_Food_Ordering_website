@@ -1,11 +1,11 @@
-const express = require("express");
+
+require("dotenv").config();const express = require("express");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const cors = require("cors");
 const Review = require("./models/reviewModel");
 const app = express();
-const PORT = 5001;
-const HOST = "192.168.54.63";
+const PORT = process.env.PORT || 5001;
 const { ConnectMongoDB } = require("./connection");
 const { CheckforAuthCookie } = require("./middlewares/auth");
 const userRouter = require("./routes/user");
@@ -14,9 +14,19 @@ const itemRouter = require("./routes/items");
 const reviewRoutes = require("./routes/reviewRoutes"); // Import review routes
 const trackingg = require("./routes/tracking"); // Import review routes
 
-// Start the server
-app.listen(PORT, () => console.log(`Server Running on PORT:${PORT}`));
 
+// Start the server
+// Connect to MongoDB and Start Server
+ConnectMongoDB(process.env.MONGO_URI)
+  .then(() => {
+    console.log("MongoDB Connected Successfully.");
+
+    app.listen(PORT, () => {
+      console.log(`Server Running on PORT:${PORT}`);
+    });
+  })
+  .catch((err) => console.log("Error Connecting MongoDB", err));
+  
 // Connect to MongoDB
 ConnectMongoDB(
 process.env.MONGO_URI)
